@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Randall's Lawfirm</a>
+      </div>
+      <div class="menumedia" id="menu-access">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">OUR PEOPLE</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            MORE
+            <i class="down-arrow"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </li>
+
+        <% if(user) { %>
+          <div>Welcome, <%=user%></div>
+          <button type='button' class='logout'>Log Out</button>
+          <% } else { %>
+          <button type="button" class="loginBtn" onclick="location.href='/login'">Login</button>
+          <button type="button" class="registerBtn" onclick="location.href='/register'">Register</button>
+          <% } %>
+          
+      </ul>
+    </div>
+  </nav>

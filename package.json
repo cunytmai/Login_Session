@@ -1,0 +1,28 @@
+{
+  "name": "law",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run server & npm run sass:watch",
+    "sass": "node-sass-chokidar views/ -o views/ --recursive",
+    "sass:watch": "node-sass-chokidar views/ -o views/ --recursive --watch",
+    "server": "nodemon server.js"
+  },
+  "author": "Tony Mai",
+  "license": "ISC",
+  "dependencies": {
+    "bcrpyt": "^2.0.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.1.10",
+    "mongojs": "^2.6.0",
+    "node-sass-chokidar": "^1.3.4",
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0"
+  }
+}
